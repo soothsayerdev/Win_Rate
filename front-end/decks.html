@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WinRate - Gerencie seus decks de Star Wars Unlimited e acompanhe suas estatísticas de vitória.">
+    <title>Decks - WinRate</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">WinRate</h1>
+        <h2 class="tagline">Manage Your Decks and WinRates</h2>
+    </header>
+
+    <main class="main-container">
+        <section class="deck-section">
+            <h3>Create a New Deck</h3>
+            <form class="form-style" id="deckForm">
+                <input type="text" id="deckName" placeholder="Deck Name" required>
+                <button type="submit" class="btn">Create Deck</button>
+            </form>
+        </section>
+
+        <section class="winrate-section">
+            <h3>Update Win/Loss Rate</h3>
+            <form id="winrateForm" class="form-style">
+                <input type="text" id="userDeck" placeholder="Your Deck ID" required>
+                <input type="text" id="opponentDeck" placeholder="Opponent Deck ID" required>
+                <input type="number" id="wins" placeholder="Wins" min="0" required>
+                <input type="number" id="losses" placeholder="Losses" min="0" required>
+                <button type="submit" class="btn">Update WinRate</button>
+            </form>
+        </section>
+
+        <section class="stats-section">
+            <h3>Your Deck Stats</h3>
+            <table id="deckStatsTable" class="table-style">
+                <thead>
+                    <tr>
+                        <th>Your Deck</th>
+                        <th>Opponent Deck</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Win Rate (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows dynamically added -->
+                </tbody>
+            </table>
+        </section>
+        <button onclick="scrollToTop()" class="scroll-btn top-btn">▲</button>
+        <button onclick="scrollToBottom()" class="scroll-btn bottom-btn">▼</button>
+
+
+        <script>
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        
+            function scrollToBottom() {
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth"
+                });
+            }
+        </script>
+        
+
+    </main>
+
+    <footer class="footer">
+        <p>May the Force be with you - WinRate, a Star Wars themed platform</p>
+    </footer>
+
+    <script src="decks.js"></script>
+</body>
+</html>

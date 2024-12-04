@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WinRate - Star Wars Unlimited: Gerencie decks e veja suas taxas de vitórias em um ambiente inspirado em Star Wars.">
+    <title>Login - WinRate</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">WinRate</h1>
+        <h2 class="tagline">Star Wars Edition</h2>
+    </header>
+
+    <main class="main-container">
+        <section class="auth-section">
+            <h3>Register</h3>
+            <form id="registerForm" class="form-style">
+                <input type="email" id="registerEmail" placeholder="Email" required>
+                <input type="password" id="registerPassword" placeholder="Password" minlength="8" required>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </section>
+
+        <section class="auth-section">
+            <h3>Login</h3>
+            <form id="loginForm" class="form-style">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" minlength="8" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </section>
+
+        <button onclick="scrollToTop()" class="scroll-btn top-btn">▲</button>
+        <button onclick="scrollToBottom()" class="scroll-btn bottom-btn">▼</button>
+
+        <script>
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        
+            function scrollToBottom() {
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth"
+                });
+            }
+        </script>
+        
+
+    </main>
+
+    <footer class="footer">
+        <p>May the Force be with you - WinRate, a Star Wars themed platform</p>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html>
